@@ -7,17 +7,17 @@ public class Pokemon {
     private String tipo;
     private boolean desmaiado;
     private boolean escolhido;
-    private String[] arte;
+
 
     public Pokemon(String nome, int ataque, int defesa, int agilidade, int hp, String tipo) {
         setNome(nome);
         setAtaque(ataque);
         setDefesa(defesa);
+        setAgilidade(agilidade);
         setHp(hp);
         setTipo(tipo);
         setDesmaiado(false);
         setEscolhido(false);
-        setArte(nome);
     }
 
     public String getNome() {
@@ -83,13 +83,5 @@ public class Pokemon {
     public void setEscolhido(boolean escolhido) {
         this.escolhido = escolhido;
     }
-
-    public String[] getArte() {
-        return arte;
-    }
-
-    public void setArte(String nome) {
-        this.arte = Arte.getArte(nome);
-    }  
     
 }
