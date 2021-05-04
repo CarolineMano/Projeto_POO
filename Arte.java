@@ -1,5 +1,21 @@
 public class Arte {
-    private static final String[] charmander = {
+    private static final String[] titulo = {
+        "                               .::.                           ",
+        "                              .;:**'                          ",
+        "                              `                               ",
+        "  .:XHHHHk.              db.   .;;.     dH  MX                ",
+        "oMMMMMMMMMMM       ~MM  dMMP :MMMMMR   MMM  MR      ~MRMN     ",
+        "QMMMMMb  'MMX       MMMMMMP !MX' :M~   MMM MMM  .oo. XMMM 'MMM",
+        "  `MMMM.  )M> :X!Hk. MMMM   XMM.o'  .  MMMMMMM X?XMMM MMM>!MMP",
+        "   'MMMb.dM! XM M'?M MMMMMX.`MMMMMMMM~ MM MMM XM `' MX MMXXMM ",
+        "    ~MMMMM~ XMM. .XM XM`'MMMb.~*?**~ .MMX M t MMbooMM XMMMMMP ",
+        "     ?MMM>  YMMMMMM! MM   `?MMRb.    `MM   !L'MMMMM XM IMMM   ",
+        "      MMMX   'MMMM'  MM       ~%:           !Mh.''' dMI IMMP  ",
+        "      'MMM.                                             IMX   ",
+        "       ~M!M                                             IM    " 
+    };
+
+    private static final String[] CHARMANDER = {
     "              _.--\"\"`-..",
     "            ,'          `.",
     "          ,'          __  `.",
@@ -36,7 +52,8 @@ public class Arte {
     "                            `\" \" -' "
     };
 
-    private static final String[] moltres = {
+
+    private static final String[] HO_OH = {
         "                                                                                                 `  ",
         "                                                                                               ``.. ",
         "       `                                                                                    `.-  -  ",
@@ -78,7 +95,7 @@ public class Arte {
         "                                                   `.   ``                                          "
     };    
 
-    private static final String[] vulpix = {
+    private static final String[] VULPIX = {
         "               _,.+-----__,._",
         "              /  /    ,'     `.",
         "     ,+._   ./...\\_  /   ,..   \\",
@@ -108,7 +125,7 @@ public class Arte {
         "                                           \"' ",
     };
 
-    private static final String[] magmar = {
+    private static final String[] MAGMAR = {
         "                                                 ,--''''-.",
         "                                               ..    `'  `",
         "                                                '    .'...'",
@@ -145,7 +162,7 @@ public class Arte {
         "                     -'"
     };
 
-    private static final String[] pikachu = {
+    private static final String[] PIKACHU = {
         "                                             ,-.",
         "                                          _.|  '",
         "                                        .'  | /",
@@ -191,7 +208,7 @@ public class Arte {
         "             _'....----\"\"\"\"\" "
     };
 
-    private static final String[] electrode = {
+    private static final String[] AMPHAROS = {
         "                         _,.--\"'\"\"\"''\"\"\"''--..__",
         "                    _.-\"'                       `-._",
         "                 _.'                                `-._",
@@ -230,7 +247,7 @@ public class Arte {
         "                               `\"\"\"''\"'\"\"\" "
     };
 
-    private static final String[] magnemite = {
+    private static final String[] DEDENNE = {
         "                                  _,._,._",
         "                                 '-\"._,\"--,",
         "                                  `\"..-+-'",
@@ -255,7 +272,7 @@ public class Arte {
         "                                       `\"\"' "
     };
 
-    private static final String[] jolteon = {
+    private static final String[] JOLTEON = {
         "XH                             HX               ",
         "H;XHX                         HXH               ",
         "H;;;;XH                      XHXH               ",
@@ -305,7 +322,7 @@ public class Arte {
         "            XH;H;XH                             "
     };
 
-    private static final String[] tangela = {
+    private static final String[] BAYLEEF = {
         "                      _____         ____",
         "                   ,\"'     `.   ,-\"'    `\".     ,.",
         "                  .  ,---.   |,'   _...    .    | `.",
@@ -347,7 +364,7 @@ public class Arte {
         "      `-----\"' ",
     };
 
-    private static final String[] gloom = {
+    private static final String[] TREECKO = {
 "                            ,.--\"\"+`-,",
 "                    ___,..-'  C'  `.' `-.",
 "                 .\"|      `-,...._   ___:.",
@@ -382,7 +399,7 @@ public class Arte {
 "                                   `'----' "
     };
 
-    private static final String[] bellsprout = {
+    private static final String[] SHAYMIN = {
         "                _.--\"'\"\"\"--._",
         "              .\"             `.",
         "             /                 .",
@@ -422,7 +439,7 @@ public class Arte {
         "                                   ' "
     };
 
-    private static final String[] bulbasaur = {
+    private static final String[] BULBASAUR = {
         "                                           /",
         "                        _,.------....___,.' ',.-.",
         "                     ,-'          _,.--\"        |",
@@ -453,7 +470,7 @@ public class Arte {
         " `\"^--'..'   '-`-^-'\"--    `-^-'`.''\"\"\"\"\"`.,^.`.--' "
     };
 
-    private static final String[] horsea = {
+    private static final String[] TOTODILE = {
         "                          _,..----.._",
         " ,\"''-.               _.-'           `\"-._",
         ".,-.   `._          ,'    ,---.           `.             _,..",
@@ -491,7 +508,7 @@ public class Arte {
         "                 `'------\"' "
     };
 
-    private static final String[] squirtle = {
+    private static final String[] SQUIRTLE = {
         "               _,........__",
         "            ,-'            \"`-.",
         "          ,'                   `-.",
@@ -527,7 +544,7 @@ public class Arte {
         "                                  `---.__,--.'"
     };
  
-    private static final String[] lapras = {
+    private static final String[] LAPRAS = {
         "                                       ,|",
         "                                       ||",
         "                               ,-\"'\"\"`' `._",
@@ -566,7 +583,7 @@ public class Arte {
         "            `"
     };
 
-    private static final String[] seel = {
+    private static final String[] MARIL = {
         "                            _,.--\"\"\"'--._",
         "                          ,\"             `.         _,.--'\"\"\"\"--.._",
         "                         /                 `.     ,\"               `.",
@@ -604,44 +621,55 @@ public class Arte {
         "                                                           `\"---\"' "
     };
 
+    public static String[] getTitulo() {
+        return titulo;
+    }
+
     public static String[] getArte(String nome){
         switch (nome) {
             case "Charmander":
-                return charmander;
-            case "Moltres":
-                return moltres;
+                return CHARMANDER;
+            case "Ho-oh":
+                return HO_OH;
             case "Vulpix":
-                return vulpix;
+                return VULPIX;
             case "Magmar": 
-                return magmar;
+                return MAGMAR;
             case "Pikachu":
-                return pikachu;
-            case "Electrode":
-                return electrode;
-            case "Magnemite":
-                return magnemite;
+                return PIKACHU;
+            case "Ampharos":
+                return AMPHAROS;
+            case "Dedenne":
+                return DEDENNE;
             case "Jolteon":
-                return jolteon;
-            case "Tangela":
-                return tangela;
-            case "Gloom":
-                return gloom;
-            case "Bellsprout":
-                return bellsprout;
+                return JOLTEON;
+            case "Bayleef":
+                return BAYLEEF;
+            case "Treecko":
+                return TREECKO;
+            case "Shaymin":
+                return SHAYMIN;
             case "Bulbasaur":
-                return bulbasaur;
-            case "Horsea":
-                return horsea;
+                return BULBASAUR;
+            case "Totodile":
+                return TOTODILE;
             case "Squirtle":
-                return squirtle;
+                return SQUIRTLE;
             case "Lapras":
-                return lapras;
-            case "Seel":
-                return seel;
+                return LAPRAS;
+            case "Maril":
+                return MARIL;
             default:
                 break;
         }
-        return charmander;
+        return CHARMANDER;
+    }
+
+    public static void imprimirArte(String nome){
+        String[] arte = getArte(nome);
+        for(int i = 0; i < arte.length; i++){
+            System.out.println(arte[i]);
+        }
     }
 
 }
