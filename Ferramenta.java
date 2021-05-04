@@ -15,10 +15,4 @@ public class Ferramenta {
         Ferramenta.sleep(2000);
         System.out.print(". ");
     }
-        // for(int i = 0; i < novoJogo.getTamanho(); i++){
-        //     System.out.println("Nome do Pokemon: " + novoJogo.getPokemons()[i].getNome());
-        //     System.out.println("Arte do Pokemon: ");
-        //     novoJogo.imprimirArte(i);
-        //     System.out.println("*********************");
-        // }
 }
