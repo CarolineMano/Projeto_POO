@@ -42,33 +42,33 @@ public class Jogo {
         maoComputador = new Pokemon[6];
     }
 
-    public Pokemon[] getPokemons() {
-        return pokemons;
-    }
+    // public Pokemon[] getPokemons() {
+    //     return pokemons;
+    // }
 
-    public Pokemon[] getMaoComputador() {
-        return maoComputador;
-    }
+    // public Pokemon[] getMaoComputador() {
+    //     return maoComputador;
+    // }
 
-    public Pokemon[] getMaoJogador() {
-        return maoJogador;
-    }
+    // public Pokemon[] getMaoJogador() {
+    //     return maoJogador;
+    // }
 
-    public int getAtributoComputador() {
-        return atributoComputador;
-    }
+    // public int getAtributoComputador() {
+    //     return atributoComputador;
+    // }
   
-    public int getAtributoJogador() {
-        return atributoJogador;
-    }
+    // public int getAtributoJogador() {
+    //     return atributoJogador;
+    // }
 
-    public int getPontosAtributoComputador() {
-        return pontosAtributoComputador;
-    }
+    // public int getPontosAtributoComputador() {
+    //     return pontosAtributoComputador;
+    // }
 
-    public int getPontosAtributoJogador() {
-        return pontosAtributoJogador;
-    }
+    // public int getPontosAtributoJogador() {
+    //     return pontosAtributoJogador;
+    // }
 
     public void imprimirDescricao() {
         String[] titulo = Arte.getTitulo();
@@ -383,6 +383,44 @@ public class Jogo {
         return true;
     }
 
+    public void testarElementosPokemon(int indicePokemonComputador, int indicePokemonJogador) {
+        if(maoJogador[indicePokemonJogador].getTipo() == "water") {
+            if(maoComputador[indicePokemonComputador].getTipo() == "fire") {
+                pontosAtributoJogador *= 1.5;
+            }
+            else if(maoComputador[indicePokemonComputador].getTipo() == "electric") {
+                pontosAtributoComputador *= 1.5;
+            }
+        }
+        else if(maoJogador[indicePokemonJogador].getTipo() == "fire") {
+            if(maoComputador[indicePokemonComputador].getTipo() == "grass") {
+                pontosAtributoJogador *= 1.5;
+            }
+            else if(maoComputador[indicePokemonComputador].getTipo() == "water") {
+                pontosAtributoComputador *= 1.5;
+            }
+        }
+        else if(maoJogador[indicePokemonJogador].getTipo() == "grass") {
+            if(maoComputador[indicePokemonComputador].getTipo() == "electric") {
+                pontosAtributoJogador *= 1.5;
+            }
+            else if(maoComputador[indicePokemonComputador].getTipo() == "fire") {
+                pontosAtributoComputador *= 1.5;
+            }
+        }
+        else if(maoJogador[indicePokemonJogador].getTipo() == "electric") {
+            if(maoComputador[indicePokemonComputador].getTipo() == "water") {
+                pontosAtributoJogador *= 1.5;
+            }
+            else if(maoComputador[indicePokemonComputador].getTipo() == "grass") {
+                pontosAtributoComputador *= 1.5;
+            }
+        }
+        System.out.println("Jogador: " + pontosAtributoJogador);
+        System.out.println("Computador: " + pontosAtributoComputador);
+        Ferramenta.sleep(2000);
+    }
+
     public void implementarJogo() {
         int indicePokemonJogador;
         int indicePokemonComputador;
@@ -399,7 +437,7 @@ public class Jogo {
                 indicePokemonComputador = comecarTurnoComputador();
                 indicePokemonJogador = responderTurnoJogador();
             }
-
+            testarElementosPokemon(indicePokemonComputador, indicePokemonJogador);
             if(pontosAtributoComputador > pontosAtributoJogador) {
                 System.out.println("O computador venceu o turno. O seu Pokémon desmaiou");
                 maoJogador[indicePokemonJogador].setDesmaiado(true);
