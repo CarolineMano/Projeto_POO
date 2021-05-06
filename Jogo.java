@@ -42,34 +42,6 @@ public class Jogo {
         maoComputador = new Pokemon[6];
     }
 
-    // public Pokemon[] getPokemons() {
-    //     return pokemons;
-    // }
-
-    // public Pokemon[] getMaoComputador() {
-    //     return maoComputador;
-    // }
-
-    // public Pokemon[] getMaoJogador() {
-    //     return maoJogador;
-    // }
-
-    // public int getAtributoComputador() {
-    //     return atributoComputador;
-    // }
-  
-    // public int getAtributoJogador() {
-    //     return atributoJogador;
-    // }
-
-    // public int getPontosAtributoComputador() {
-    //     return pontosAtributoComputador;
-    // }
-
-    // public int getPontosAtributoJogador() {
-    //     return pontosAtributoJogador;
-    // }
-
     public void imprimirDescricao() {
         String[] titulo = Arte.getTitulo();
 
@@ -104,10 +76,10 @@ public class Jogo {
             }
         }
         Ferramenta.computarEscolha();
-        System.out.println("Pokémons escolhidos: ");
-        for(int i = 0; i < maoComputador.length; i++){
-            System.out.println(maoComputador[i].getNome());
-        }
+        System.out.println("6 Pokémon escolhidos ");
+        // for(int i = 0; i < maoComputador.length; i++){
+        //     System.out.println(maoComputador[i].getNome());
+        // }
         System.out.println("*************************\n\n");
         Ferramenta.sleep(2000);
     }
@@ -135,7 +107,7 @@ public class Jogo {
             else {
                 System.out.println("Por favor, escolha uma opção válida!");
             }
-            System.out.println("Faltam escolher " + (maoJogador.length - contador) + " Pokémon\n");
+            System.out.println("Você precisa escolher mais " + (maoJogador.length - contador) + " Pokémon\n");
             Ferramenta.sleep(1000);
         }
     }
@@ -171,19 +143,79 @@ public class Jogo {
     }
     
     public void mostrarPokemonValido() {
+        int teste = 0;
         for(int i = 0; i < maoJogador.length; i++) {
+            teste = ("Pokémon nº " + i).length();
             if(!maoJogador[i].isDesmaiado()){
-                System.out.println("Pokémon nº " + i);
-                System.out.println("Nome: " + maoJogador[i].getNome());
-                System.out.println("Ataque: " + maoJogador[i].getAtaque());
-                System.out.println("Defesa: " + maoJogador[i].getDefesa());
-                System.out.println("Agilidade: " + maoJogador[i].getAgilidade());
-                System.out.println("HP: " + maoJogador[i].getHp());
-                System.out.println("Tipo: " + maoJogador[i].getTipo());
-                System.out.println("********************");
-                Ferramenta.sleep(1000);
+                System.out.print("Pokémon nº " + i);
+                for(int j = 0; j < 30 - teste; j++) {
+                    System.out.print(" ");
+                }
             }
         }
+        System.out.println();
+        for(int i = 0; i < maoJogador.length; i++) {
+            teste = ("Nome: " + maoJogador[i].getNome()).length();
+            if(!maoJogador[i].isDesmaiado()){
+                System.out.print("Nome: " + maoJogador[i].getNome());
+                for(int j = 0; j < 30 - teste; j++) {
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < maoJogador.length; i++) {
+            teste = ("Ataque: " + maoJogador[i].getAtaque()).length();
+            if(!maoJogador[i].isDesmaiado()){
+                System.out.print("Ataque: " + maoJogador[i].getAtaque());
+                for(int j = 0; j < 30 - teste; j++) {
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < maoJogador.length; i++) {
+            teste = ("Defesa: " + maoJogador[i].getDefesa()).length();
+            if(!maoJogador[i].isDesmaiado()){
+                System.out.print("Defesa: " + maoJogador[i].getDefesa());
+                for(int j = 0; j < 30 - teste; j++) {
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < maoJogador.length; i++) {
+            teste = ("Agilidade: " + maoJogador[i].getAgilidade()).length();
+            if(!maoJogador[i].isDesmaiado()){
+                System.out.print("Agilidade: " + maoJogador[i].getAgilidade());
+                for(int j = 0; j < 30 - teste; j++) {
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < maoJogador.length; i++) {
+            teste = ("HP: " + maoJogador[i].getHp()).length();
+            if(!maoJogador[i].isDesmaiado()){
+                System.out.print("HP: " + maoJogador[i].getHp());
+                for(int j = 0; j < 30 - teste; j++) {
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < maoJogador.length; i++) {
+            teste = ("Tipo: " + maoJogador[i].getTipo()).length();
+            if(!maoJogador[i].isDesmaiado()){
+                System.out.print("Tipo: " + maoJogador[i].getTipo());
+                for(int j = 0; j < 30 - teste; j++) {
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("**************************************************");
+        Ferramenta.sleep(1000);
     }
 
     public int comecarTurnoJogador() {
@@ -255,7 +287,7 @@ public class Jogo {
         while(teste) {
             escolhaPokemon = random.nextInt(6);
             if(pokemons[escolhaPokemon].isDesmaiado() == false){
-                System.out.println("\nO computador escolheu o " + maoComputador[escolhaPokemon].getNome());
+                System.out.println("\nO computador escolheu o " + maoComputador[escolhaPokemon].getNome()); //Acho que talvez tenha que ser alterado, não sei se pode mostrar o Pokémon
                 Arte.imprimirArte(maoComputador[escolhaPokemon].getNome());   
                 teste = false;
             }
@@ -266,25 +298,29 @@ public class Jogo {
         escolhaAtributo = random.nextInt(4) + 1;
         switch (escolhaAtributo) {
             case ATAQUE:
-                System.out.println("\nEle escolheu Ataque, com um valor de: " + maoComputador[escolhaPokemon].getAtaque());
+                // System.out.println("\nEle escolheu Ataque, com um valor de: " + maoComputador[escolhaPokemon].getAtaque());
+                System.out.println("\nEle escolheu Ataque");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getAtaque();
                 this.atributoComputador = ATAQUE;
                 Ferramenta.sleep(1000);
                 break;
             case DEFESA:
-                System.out.println("\nEle escolheu Defesa, com um valor de: " + maoComputador[escolhaPokemon].getDefesa());
+                // System.out.println("\nEle escolheu Defesa, com um valor de: " + maoComputador[escolhaPokemon].getDefesa());
+                System.out.println("\nEle escolheu Defesa");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getDefesa();
                 this.atributoComputador = DEFESA;
                 Ferramenta.sleep(1000);
                 break;
             case AGILIDADE:
-                System.out.println("\nEle escolheu Agilidade, com um valor de: " + maoComputador[escolhaPokemon].getAgilidade());
+                // System.out.println("\nEle escolheu Agilidade, com um valor de: " + maoComputador[escolhaPokemon].getAgilidade());
+                System.out.println("\nEle escolheu Agilidade");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getAgilidade();
                 this.atributoComputador = AGILIDADE;
                 Ferramenta.sleep(1000);
                 break;
             case HP:
-                System.out.println("\nEle escolheu HP, com um valor de: " + maoComputador[escolhaPokemon].getHp());
+                // System.out.println("\nEle escolheu HP, com um valor de: " + maoComputador[escolhaPokemon].getHp());
+                System.out.println("\nEle escolheu HP");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getHp();
                 this.atributoComputador = HP;
                 Ferramenta.sleep(1000);
@@ -421,6 +457,14 @@ public class Jogo {
         Ferramenta.sleep(2000);
     }
 
+    public void mostrarPokemonDesmaiado(Pokemon[] mao) {
+        for(int i = 0; i < mao.length; i++) {
+            if(mao[i].isDesmaiado() == true) {
+                System.out.println(mao[i].getNome());
+            }
+        }
+    }
+
     public void implementarJogo() {
         int indicePokemonJogador;
         int indicePokemonComputador;
@@ -444,6 +488,7 @@ public class Jogo {
                 contadorJogador++;
                 testePartida = COMPUTADOR;
                 System.out.println("Você tem " + contadorJogador + " Pokémon desmaiados");
+                mostrarPokemonDesmaiado(maoJogador);
             }
             else if (pontosAtributoJogador > pontosAtributoComputador) {
                 System.out.println("Você venceu esse turno! O Pokémon do computador desmaiou");
@@ -451,6 +496,7 @@ public class Jogo {
                 contadorComputador++;
                 testePartida = JOGADOR;
                 System.out.println("O computador tem " + contadorComputador + " Pokémon desmaiados");
+                mostrarPokemonDesmaiado(maoComputador);
             }
             else {
                 System.out.println("O turno empatou. Os dois Pokémon desmaiaram!");
@@ -459,7 +505,9 @@ public class Jogo {
                 contadorComputador++;
                 contadorJogador++;
                 System.out.println("Você tem " + contadorJogador + " Pokémon desmaiados");
+                mostrarPokemonDesmaiado(maoJogador);
                 System.out.println("O computador tem " + contadorComputador + " Pokémon desmaiados");
+                mostrarPokemonDesmaiado(maoComputador);
             }
             testeFimJogo = definirFimJogo(contadorJogador, contadorComputador);
         }                
