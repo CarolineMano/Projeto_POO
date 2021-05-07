@@ -42,7 +42,7 @@ public class Jogo {
         maoComputador = new Pokemon[6];
     }
 
-    public void imprimirDescricao() {
+    private void imprimirDescricao() {
         String[] titulo = Arte.getTitulo();
 
         for(int i = 0; i < titulo.length; i++){
@@ -62,7 +62,7 @@ public class Jogo {
         Ferramenta.sleep(2000);
     }
 
-    public void escolherMaoComputador() {
+    private void escolherMaoComputador() {
         Random random = new Random();
         int contador = 0;
         int escolha;
@@ -81,7 +81,7 @@ public class Jogo {
         Ferramenta.sleep(2000);
     }
 
-    public void escolherMaoJogador() {
+    private void escolherMaoJogador() {
         int contador = 0;
         int escolha = 0;
         System.out.println("Você irá escolher seis Pokémon");
@@ -109,7 +109,7 @@ public class Jogo {
         }
     }
 
-    public boolean decidirQuemComeca() {
+    private boolean decidirQuemComeca() {
         int escolha = 0;
         Random random = new Random();
         System.out.println("Vamos sortear quem irá começar!");
@@ -127,7 +127,7 @@ public class Jogo {
         }
     }
 
-    public boolean prepararPartida() {
+    private boolean prepararPartida() {
         this.imprimirDescricao();
         if(decidirQuemComeca()) {
             this.escolherMaoJogador();
@@ -139,7 +139,7 @@ public class Jogo {
         return COMPUTADOR;
     }
     
-    public void mostrarPokemonValido() {
+    private void mostrarPokemonValido() {
         int teste = 0;
         for(int i = 0; i < maoJogador.length; i++) {
             teste = ("Pokémon nº " + i).length();
@@ -215,7 +215,7 @@ public class Jogo {
         Ferramenta.sleep(1000);
     }
 
-    public int comecarTurnoJogador() {
+    private int comecarTurnoJogador() {
         int escolhaPokemon = 0;
         int escolhaAtributo = 0;
         boolean teste = true;
@@ -274,7 +274,7 @@ public class Jogo {
         return escolhaPokemon;
     }
 
-    public int comecarTurnoComputador() {
+    private int comecarTurnoComputador() {
         Random random = new Random();
         boolean teste = true;
         int escolhaPokemon = 0;
@@ -322,7 +322,7 @@ public class Jogo {
         return escolhaPokemon;
     }
 
-    public int responderTurnoJogador() {
+    private int responderTurnoJogador() {
         int escolha = 0;
         boolean teste = true;
         System.out.println("O computador escolheu o atributo " + ATRIBUTOS[atributoComputador - 1] + ". Escolha um Pokémon para batalhar com o mesmo atributo");
@@ -360,7 +360,7 @@ public class Jogo {
         return escolha;
     }
 
-    public int responderTurnoComputador() {
+    private int responderTurnoComputador() {
         Random random = new Random();
         int escolha = 0;
         boolean teste = true; 
@@ -393,7 +393,7 @@ public class Jogo {
         return escolha;
     }
 
-    public boolean definirFimJogo(int contadorJogador, int contadorComputador) {
+    private boolean definirFimJogo(int contadorJogador, int contadorComputador) {
         if(contadorJogador == maoJogador.length || contadorComputador == maoComputador.length) {
             System.out.println("\nFim de jogo!");
             if(contadorJogador < contadorComputador) {
@@ -412,7 +412,7 @@ public class Jogo {
         return true;
     }
 
-    public void testarElementosPokemon(int indicePokemonComputador, int indicePokemonJogador) {
+    private void testarElementosPokemon(int indicePokemonComputador, int indicePokemonJogador) {
         if(maoJogador[indicePokemonJogador].getTipo() == "water") {
             if(maoComputador[indicePokemonComputador].getTipo() == "fire") {
                 pontosAtributoJogador *= 1.5;
@@ -450,7 +450,7 @@ public class Jogo {
         Ferramenta.sleep(2000);
     }
 
-    public void mostrarPokemonDesmaiado(Pokemon[] mao) {
+    private void mostrarPokemonDesmaiado(Pokemon[] mao) {
         for(int i = 0; i < mao.length; i++) {
             if(mao[i].isDesmaiado() == true) {
                 System.out.println(mao[i].getNome());

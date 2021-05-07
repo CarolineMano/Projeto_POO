@@ -779,7 +779,7 @@ public class Arte {
         return titulo;
     }
 
-    public static String[] getArte(String nome){
+    private static String[] getArte(String nome){
         switch (nome) {
             case "Charmander":
                 return CHARMANDER;
