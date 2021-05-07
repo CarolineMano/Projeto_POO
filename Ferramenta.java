@@ -14,5 +14,6 @@ public class Ferramenta {
         System.out.print(". ");
         Ferramenta.sleep(2000);
         System.out.print(". ");
+        System.out.println();
     }
 }
