@@ -77,9 +77,6 @@ public class Jogo {
         }
         Ferramenta.computarEscolha();
         System.out.println("6 Pokémon escolhidos ");
-        // for(int i = 0; i < maoComputador.length; i++){
-        //     System.out.println(maoComputador[i].getNome());
-        // }
         System.out.println("*************************\n\n");
         Ferramenta.sleep(2000);
     }
@@ -119,12 +116,12 @@ public class Jogo {
         escolha = random.nextInt(2);
         Ferramenta.computarEscolha();
         if(escolha == 0) {
-            System.out.println("\nO jogador irá começar a partida\n");
+            System.out.println("O jogador irá começar a partida\n");
             Ferramenta.sleep(2000);
             return JOGADOR;
         }
         else {
-            System.out.println("\nO computador irá começar a partida\n");
+            System.out.println("O computador irá começar a partida\n");
             Ferramenta.sleep(2000);
             return COMPUTADOR;
         }
@@ -286,8 +283,8 @@ public class Jogo {
         Ferramenta.computarEscolha();
         while(teste) {
             escolhaPokemon = random.nextInt(6);
-            if(pokemons[escolhaPokemon].isDesmaiado() == false){
-                System.out.println("\nO computador escolheu o " + maoComputador[escolhaPokemon].getNome()); //Acho que talvez tenha que ser alterado, não sei se pode mostrar o Pokémon
+            if(maoComputador[escolhaPokemon].isDesmaiado() == false){
+                System.out.println("\nO computador escolheu o " + maoComputador[escolhaPokemon].getNome());
                 Arte.imprimirArte(maoComputador[escolhaPokemon].getNome());   
                 teste = false;
             }
@@ -298,28 +295,24 @@ public class Jogo {
         escolhaAtributo = random.nextInt(4) + 1;
         switch (escolhaAtributo) {
             case ATAQUE:
-                // System.out.println("\nEle escolheu Ataque, com um valor de: " + maoComputador[escolhaPokemon].getAtaque());
                 System.out.println("\nEle escolheu Ataque");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getAtaque();
                 this.atributoComputador = ATAQUE;
                 Ferramenta.sleep(1000);
                 break;
             case DEFESA:
-                // System.out.println("\nEle escolheu Defesa, com um valor de: " + maoComputador[escolhaPokemon].getDefesa());
                 System.out.println("\nEle escolheu Defesa");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getDefesa();
                 this.atributoComputador = DEFESA;
                 Ferramenta.sleep(1000);
                 break;
             case AGILIDADE:
-                // System.out.println("\nEle escolheu Agilidade, com um valor de: " + maoComputador[escolhaPokemon].getAgilidade());
                 System.out.println("\nEle escolheu Agilidade");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getAgilidade();
                 this.atributoComputador = AGILIDADE;
                 Ferramenta.sleep(1000);
                 break;
             case HP:
-                // System.out.println("\nEle escolheu HP, com um valor de: " + maoComputador[escolhaPokemon].getHp());
                 System.out.println("\nEle escolheu HP");
                 this.pontosAtributoComputador = maoComputador[escolhaPokemon].getHp();
                 this.atributoComputador = HP;
@@ -402,7 +395,7 @@ public class Jogo {
 
     public boolean definirFimJogo(int contadorJogador, int contadorComputador) {
         if(contadorJogador == maoJogador.length || contadorComputador == maoComputador.length) {
-            System.out.println("Fim de jogo!");
+            System.out.println("\nFim de jogo!");
             if(contadorJogador < contadorComputador) {
                 System.out.println("Você ganhou a partida");
                 return false;
@@ -473,7 +466,7 @@ public class Jogo {
         boolean testeFimJogo = true;
         boolean testePartida = prepararPartida();
         while (testeFimJogo) {
-            System.out.println("O turno já vai começar!\n");
+            System.out.println("***O turno já vai começar!***\n");
             if (testePartida) {
                 indicePokemonJogador = comecarTurnoJogador();
                 indicePokemonComputador = responderTurnoComputador();
