@@ -93,8 +93,8 @@ public class Jogo {
                     System.out.println("Pokémon nº "+ i + ": " + pokemons[i].getNome());
                 }            
             }
-            System.out.println("Escolha o número correspondente ao Pokémon que quer escolher: ");
-            escolha = entrada.nextInt();
+            escolha = Ferramenta.testarInteiro("Escolha o número correspondente ao Pokémon que quer escolher: ", entrada);            
+            
             if(escolha < pokemons.length && pokemons[escolha] != null && !pokemons[escolha].isEscolhido()) {
                 System.out.println("Você escolheu: " + pokemons[escolha].getNome());
                 maoJogador[contador] = pokemons[escolha];
@@ -223,8 +223,8 @@ public class Jogo {
         mostrarPokemonValido();
 
         while(teste) {
-            System.out.println("Primeiro escolha o número do Pokémon: ");
-            escolhaPokemon = entrada.nextInt();
+            escolhaPokemon = Ferramenta.testarInteiro("Primeiro escolha o número do Pokémon: ", entrada);
+            
             if(escolhaPokemon < maoJogador.length && escolhaPokemon >= 0 && !maoJogador[escolhaPokemon].isDesmaiado()){
                 System.out.println("Você escolheu " + maoJogador[escolhaPokemon].getNome());
                 Arte.imprimirArte(maoJogador[escolhaPokemon].getNome());   
@@ -239,9 +239,9 @@ public class Jogo {
         teste = true;
 
         while(teste) {
-            System.out.println("Escolha o atributo do " + maoJogador[escolhaPokemon].getNome() + " para a batalha: ");
+            System.out.println("Escolha o atributo do " + maoJogador[escolhaPokemon].getNome() + " para a batalha");
             System.out.println("1 - Ataque / 2 - Defesa / 3 - Agilidade / 4 - HP");
-            escolhaAtributo = entrada.nextInt();
+            escolhaAtributo = Ferramenta.testarInteiro("Escolha o número do atributo: ", entrada);
             if(escolhaAtributo > 0 && escolhaAtributo < 5) {
                 teste = false;
                 switch (escolhaAtributo) {
@@ -331,7 +331,7 @@ public class Jogo {
         mostrarPokemonValido();
 
         while(teste) {
-            escolha = entrada.nextInt();
+            escolha = Ferramenta.testarInteiro("Escolha o número do Pokémon: ", entrada);
             if(maoJogador[escolha].isDesmaiado() == false && escolha >= 0 && escolha < maoJogador.length) {
                 teste = false;
                 System.out.println("Você escolheu o " + maoJogador[escolha].getNome());
